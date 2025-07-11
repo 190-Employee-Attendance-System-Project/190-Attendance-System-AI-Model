@@ -19,6 +19,9 @@ logging.basicConfig(level=logging.DEBUG)
 # Increase max content length
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16MB
 
+# For Vercel deployment
+app.debug = False
+
 # Validate Cloudinary configuration
 cloudinary_name = os.getenv("CLOUDINARY_NAME")
 cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY")
